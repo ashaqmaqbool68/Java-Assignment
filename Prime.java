@@ -1,24 +1,31 @@
-package basics;
+class Prime{
+static void checkPrime(int n)
+{
 
-public class Prime {
-public static void main(String[] args) {
-	int i,j;
-	int t=1,s,flag=1;
-	System.out.println(t);
-	for(i=2;i<=100;i++)
-	{
-		for(j=2;j<i;j++)
-		{ s=i%j;
-			if(s==0);
-			{
-				flag=0;
-				System.out.println(i+"is not prime");
-			}
-			else{
-				
-				System.out.println(i+"is prime");
-		}}
-	
-	}
+int m=n/2,flag=1;
+if(n==0||n==1)
+{
+System.out.println(n+ "is not prime");
+}
+else{
+for(int i=2;i<=m;i++)
+{
+if(n%i==0)
+{
+System.out.println(n+ " is not prime");
+flag=0;
+break;
+}
+}
+if(flag==1)
+{
+System.out.println(n+ " is Prime");
+}}}
+public static void main(String args[])
+{
+checkPrime(2);
+checkPrime(9);
+checkPrime(7);
+checkPrime(20);
 }
 }
